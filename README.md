@@ -14,7 +14,7 @@ A fully functional **Distributed Key-Value Store** implemented in **Go** using *
 ---
 
 ## Project Structure
-
+```
 distributed-kv-store/
 ├── kvstore/
 │     ├── kvstore.proto          # Protocol Buffers definition
@@ -27,7 +27,7 @@ distributed-kv-store/
 ├── main.go                      # gRPC server with node-to-node communication
 ├── go.mod                       # Go module file
 └── README.md                    # Documentation
-
+```
 
 ---
 
@@ -92,7 +92,7 @@ Edit the ```currentNode``` value in ```main.go``` to ```localhost:50052```:
 currentNode := "localhost:50052"
 ```
 
-###Step 2: Test the System
+### Step 2: Test the System
 You can test the distributed key-value store using BloomRPC, grpcurl, or a custom client.
 
 #### Using BloomRPC
@@ -115,10 +115,10 @@ grpcurl -plaintext -d '{"key": "mykey", "value": "myvalue"}' localhost:50051 pb.
 ```
 Get the value of a key:
 
+
 ```bash
 grpcurl -plaintext -d '{"key": "mykey"}' localhost:50051 pb.KeyValueService.Get
 ```
-
 Delete a key:
 
 ```bash
